@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Documenats</title>
+
+    <style>
+        body {
+            margin-top: 50px;
+        }
+        
+        .div {
+            position: absolute;
+            bottom: 0px;
+            top: 80px;
+            right: 0px;
+            left: 0px;
+            background-color: grey;
+            opacity: 0%;
+            z-index: -1;
+            transition: opacity 0.5s;
+        }
+        
+        body:has(button:hover) .div {
+            opacity: 30%;
+        }
+        
+        .button {
+            border: none;
+            display: flex;
+            position: relative;
+            align-items: center;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        
+        .div-absolute {
+            position: absolute;
+            bottom: -50px;
+            /* max-width: 100px; */
+            background-color: white;
+            padding: 6px 8px 6px 8px;
+            opacity: 0;
+            transition: opacity 0.15s;
+            /* cursor: none; */
+            visibility: hidden;
+            border-radius: 4px;
+        }
+        
+        .button {
+            padding: 10px 20px 10px 20px;
+            z-index: 10;
+            cursor: pointer;
+            background-color: lightpink;
+            border-radius: 4px;
+        }
+        
+        .button:hover {}
+        
+        .button:hover .div-absolute {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .div-button {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            /* background-color: lightgreen; */
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="div-button">
+        <button class="button">
+			aa
+			<div class="div-absolute">
+				kkkkkkkkkkkk
+			</div>
+		</button>
+    </div>
+    <div class="div">
+    </div>
+</body>
+
+</html>
